@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 660px;
+    --breakpoint-lg: 1020px;
+    
+}
+@theme{
+    --color-primary: #010a5e;
+    --color-primarylight: #010d78;
+    --color-secondary: #ffcc00;
+    --color-paragraph: #c0c0c0;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-green: #007936;
+    --color-red: #cc3433;
+    --color-dark: #000;
+    --color-darklight: #171717;
+}
+@theme {
+  
+}
+@layer base {
+  html{
+    @apply scroll-smooth;
+  }
+
+
+  section {
+    padding: 8px;
+  }
+
+  * {
+    padding: 0px;
+    margin: 0px;
+    
+  }
+ 
+}
+
+@layer components {
+  .tabs-wrap ul li:hover{
+    @apply bg-secondary duration-200 ease-in-out text-black dark:bg-darklight;
+  }
+   .tabs-wrap ul li.active{
+    @apply bg-secondary duration-200 ease-in-out text-black dark:bg-darklight;
+    
+  }
+  .btn{
+    @apply bg-primarylight px-6 py-4 rounded-md
+  }
+
+.title{
+  @apply text-xl md:text-2xl font-bold uppercase lg:text-2xl
+}
+
+}
